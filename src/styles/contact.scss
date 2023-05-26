@@ -1,0 +1,35 @@
+#contact {
+  text-align: center;
+  min-height: 500px;
+
+  .title-chip {
+    color: var(--blue-color);
+    font-size: 14px;
+    .code-number {
+      font-family: var(--font-sp-mono);
+    }
+  }
+
+  .contact-content {
+    h2 {
+      margin-top: 10px;
+      font-size: 64px;
+
+      @include mobile {
+        font-size: 50px;
+      }
+    }
+
+    p {
+      max-width: 500px;
+      margin: 20px auto;
+      color: var(--gray-color-ligth);
+      font-size: 18px;
+    }
+
+    a {
+      margin-top: 20px;
+      width: 120px;
+    }
+  }
+}

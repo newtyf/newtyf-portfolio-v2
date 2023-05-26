@@ -1,0 +1,37 @@
+---
+import { menu } from "../utils/profile";
+---
+
+<aside>
+  <div class='background-close'></div>
+  <nav>
+    <h2 class='animate__animated'>
+      <a href={"#home"}> Newtyf</a>
+    </h2>
+    <ol>
+      {
+        menu.map((item, index) => (
+          <li
+            class={`animate__animated animate__fadeInDown`}
+            style={{ animationDelay: `${(index + 1) / 4}s` }}
+          >
+            <a
+              class={!!item.styleCustom ? "btn" : "nav"}
+              href={item.link}
+            >
+              {item.title}
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </nav>
+</aside>
+
+<script>
+  import { AsideEffect } from "../helpers/AsideEffect";
+  const { hideSlide } = AsideEffect();
+
+  // const links = document.getElementsByTagName("a") as HTMLLinkElement;
+  // links.addEventListener("click", hideSlide);
+</script>

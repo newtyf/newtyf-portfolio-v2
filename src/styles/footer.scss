@@ -1,0 +1,11 @@
+footer {
+  text-align: center;
+  height: 80px;
+  font-family: var(--font-sp-mono);
+  font-size: 13px;
+  a {
+    &.nav {
+      color: var(--gray-color-ligth);
+    }
+  }
+}

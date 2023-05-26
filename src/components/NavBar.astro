@@ -1,0 +1,47 @@
+---
+import { menu } from "../utils/profile";
+---
+
+<nav id='navbar'>
+  <h1 class='animate__animated'>
+    <a href='#home'> Newtyf</a>
+  </h1>
+
+  <ol>
+    {
+      menu.map((item, index) => (
+        <li
+          class={`animate__animated animate__fadeInDown`}
+          style={{ animationDelay: `${(index + 1) / 4}s` }}
+        >
+          <a class={!!item.styleCustom ? "btn" : "nav"} href={item.link}>
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+
+  <div class='menu-hamburger animate__animated animate__fadeInDown'>
+    <button title='menu' id='btnShowAside'>
+      <div id='nav-icon1'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </div>
+</nav>
+
+<script>
+  import { AsideEffect } from "../helpers/AsideEffect";
+  const { showSlide } = AsideEffect();
+
+  let btnAside = document.getElementById("btnShowAside") as HTMLButtonElement;
+  btnAside.addEventListener("click", showSlide);
+
+  let toggleBtn = document.getElementById("nav-icon1") as HTMLButtonElement;
+  toggleBtn.addEventListener("click", (e: any) => {
+    e.currentTarget.classList.toggle("open");
+  });
+</script>
