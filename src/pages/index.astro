@@ -1,7 +1,7 @@
 ---
 // styles
 import "../styles/globals.scss";
-import "animate.css"
+import "animate.css";
 
 import NavBar from "../components/NavBar.astro";
 import AsideSlide from "../components/AsideSlide.astro";
@@ -13,16 +13,14 @@ import Projects from "../components/sections/Projects.astro";
 import Contact from "../components/sections/Contact.astro";
 import { mail, social } from "../utils/profile";
 
-const res = await fetch(
-    `https://api.github.com/repos/newtyf/newtyf-portfolio`
-  );
-  const dataRepo = await res.json();
+const res = await fetch(`https://api.github.com/repos/newtyf/newtyf-portfolio`);
+const dataRepo = await res.json();
 
-  const resUser = await fetch(`https://api.github.com/users/newtyf`);
-  const dataUser = await resUser.json();
+const resUser = await fetch(`https://api.github.com/users/newtyf`);
+const dataUser = await resUser.json();
 
-  const { stargazers_count } = dataRepo;
-  const { followers } = dataUser;
+const { stargazers_count } = dataRepo;
+const { followers } = dataUser;
 ---
 
 <html lang='en'>
@@ -52,6 +50,19 @@ const res = await fetch(
     <meta name='generator' content={Astro.generator} />
     <title>Newtyf</title>
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-X94KED5K67'
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-X94KED5K67");
+    console.log("Google analytics charged succesfull");
+  </script>
 </html>
 <body>
   <NavBar />
