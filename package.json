@@ -10,8 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^2.2.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.2",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
     "animate.css": "^4.1.1",
     "astro": "^2.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.62.1"
   }
 }

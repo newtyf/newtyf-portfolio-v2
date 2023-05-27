@@ -1,3 +1,8 @@
+---
+import { VerticalTabs } from "../VerticalTabs";
+import { jobs } from "../../utils/profile";
+---
+
 <section id='work' class='container'>
   <div class='title-section reveal'>
     <h2>
@@ -6,6 +11,6 @@
     <span class='line-title'></span>
   </div>
   <div class='work-content reveal'>
-    <!-- <VerticalTabs works={listJobs} /> -->
+    <VerticalTabs works={jobs} client:visible />
   </div>
 </section>

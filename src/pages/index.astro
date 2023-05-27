@@ -1,5 +1,8 @@
 ---
+// styles
 import "../styles/globals.scss";
+import "animate.css"
+
 import NavBar from "../components/NavBar.astro";
 import AsideSlide from "../components/AsideSlide.astro";
 
@@ -9,6 +12,17 @@ import Work from "../components/sections/Work.astro";
 import Projects from "../components/sections/Projects.astro";
 import Contact from "../components/sections/Contact.astro";
 import { mail, social } from "../utils/profile";
+
+const res = await fetch(
+    `https://api.github.com/repos/newtyf/newtyf-portfolio`
+  );
+  const dataRepo = await res.json();
+
+  const resUser = await fetch(`https://api.github.com/users/newtyf`);
+  const dataUser = await resUser.json();
+
+  const { stargazers_count } = dataRepo;
+  const { followers } = dataUser;
 ---
 
 <html lang='en'>
@@ -48,6 +62,26 @@ import { mail, social } from "../utils/profile";
     <Work />
     <Projects />
     <Contact />
+    <footer>
+      <a
+        href='https://github.com/newtyf/newtyf-portfolio'
+        target='_blank'
+        class='nav'
+        rel='noopener'
+      >
+        Designed & Built by Axel Muñoz
+        <br />
+        <span>
+          {stargazers_count}
+          <i class='bi bi-stars'></i>
+        </span>
+        |
+        <span>
+          {followers}
+          <i class='bi bi-github'></i>
+        </span>
+      </a>
+    </footer>
   </main>
   <AsideSlide />
 
@@ -87,7 +121,6 @@ import { mail, social } from "../utils/profile";
   src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'
   onload={}
 ></script>
-
 <script>
   import { ShowContentScroll } from "../helpers/ShowContentScroll";
   window.particlesJS.load("particles-js", "/particles.json", function () {

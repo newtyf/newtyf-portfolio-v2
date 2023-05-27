@@ -3,10 +3,10 @@ import { menu } from "../utils/profile";
 ---
 
 <aside>
-  <div class='background-close'></div>
+  <div class='background-close hide-slide'></div>
   <nav>
     <h2 class='animate__animated'>
-      <a href={"#home"}> Newtyf</a>
+      <a class='hide-slide' href={"#home"}> Newtyf</a>
     </h2>
     <ol>
       {
@@ -16,7 +16,7 @@ import { menu } from "../utils/profile";
             style={{ animationDelay: `${(index + 1) / 4}s` }}
           >
             <a
-              class={!!item.styleCustom ? "btn" : "nav"}
+              class={!!item.styleCustom ? "btn hide-slide" : "nav hide-slide"}
               href={item.link}
             >
               {item.title}
@@ -32,6 +32,12 @@ import { menu } from "../utils/profile";
   import { AsideEffect } from "../helpers/AsideEffect";
   const { hideSlide } = AsideEffect();
 
-  // const links = document.getElementsByTagName("a") as HTMLLinkElement;
-  // links.addEventListener("click", hideSlide);
+  const links = document.getElementsByClassName(
+    "hide-slide"
+  ) as HTMLCollectionOf<Element>;
+
+  for (let index = 0; index < links.length; index++) {
+    const link = links[index];
+    link.addEventListener("click", hideSlide);
+  }
 </script>

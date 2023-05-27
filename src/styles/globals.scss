@@ -192,10 +192,11 @@ a {
 
   h2 {
     font-size: 28px;
+    white-space: nowrap;
     @include mobile {
       font-size: 18px;
     }
-    @include s-mobile {
+    @include s-mobile() {
       font-size: 12px;
     }
 
@@ -206,7 +207,7 @@ a {
       @include mobile {
         font-size: 18px;
       }
-      @include s-mobile {
+      @include s-mobile() {
         font-size: 12px;
       }
     }
@@ -214,13 +215,12 @@ a {
 
   .line-title {
     width: 100%;
-    max-width: 280px;
     height: 1px;
     margin-left: 20px;
     margin-top: 4px;
     background-color: var(--gray-color);
-    @include s-mobile {
-      max-width: 100px;
+    @include desktop() {
+      max-width: 300px;
     }
   }
 }

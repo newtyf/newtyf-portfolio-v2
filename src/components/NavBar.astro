@@ -35,6 +35,8 @@ import { menu } from "../utils/profile";
 
 <script>
   import { AsideEffect } from "../helpers/AsideEffect";
+  import { NavBarEffect } from "../helpers/NavBarEffect";
+
   const { showSlide } = AsideEffect();
 
   let btnAside = document.getElementById("btnShowAside") as HTMLButtonElement;
@@ -44,4 +46,6 @@ import { menu } from "../utils/profile";
   toggleBtn.addEventListener("click", (e: any) => {
     e.currentTarget.classList.toggle("open");
   });
+
+  NavBarEffect();
 </script>
