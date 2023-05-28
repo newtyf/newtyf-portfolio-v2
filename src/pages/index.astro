@@ -48,9 +48,12 @@ const { followers } = dataUser;
       rel='stylesheet'
     />
     <meta name='generator' content={Astro.generator} />
-    <meta name="description" content="I am a Fullstack Developer residing in Peru, with 3 years of
+    <meta
+      name='description'
+      content='I am a Fullstack Developer residing in Peru, with 3 years of
     experience in the software industry. Being the web my main
-    development focus.">
+    development focus.'
+    />
     <title>Newtyf</title>
   </head>
   <!-- Google tag (gtag.js) -->
@@ -77,6 +80,22 @@ const { followers } = dataUser;
     <Projects />
     <Contact />
     <footer>
+      <ul class='social-list'>
+        {
+          social.map((item) => (
+            <li>
+              <a
+                title='social-link'
+                href={item.link}
+                class='nav'
+                target='_blank'
+              >
+                <i class={`bi bi-${item.title}`} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
       <a
         href='https://github.com/newtyf/newtyf-portfolio'
         target='_blank'

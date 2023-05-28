@@ -8,4 +8,25 @@ footer {
       color: var(--gray-color-ligth);
     }
   }
+  @include mobile {
+    height: 100px;
+  }
+
+  .social-list {
+    display: none;
+    list-style: none;
+    justify-content: center;
+
+    li {
+      margin: 0 10px;
+      margin-bottom: 10px;
+
+      a {
+        font-size: 16px;
+      }
+    }
+    @include mobile() {
+      display: flex;
+    }
+  }
 }
