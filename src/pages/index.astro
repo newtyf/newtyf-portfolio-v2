@@ -26,7 +26,7 @@ const { followers } = dataUser;
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.ico' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.webp' />
     <meta name='viewport' content='width=device-width' />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link
@@ -84,20 +84,22 @@ const { followers } = dataUser;
         {
           social.map((item) => (
             <li>
-              <a rel="noopener"
+              <a
+                rel='noopener'
                 title='social-link'
                 href={item.link}
                 class='nav'
                 target='_blank'
               >
                 <i class={`bi bi-${item.title}`} />
-                <span class="linkText--hide">{item.title}</span>
+                <span class='linkText--hide'>{item.title}</span>
               </a>
             </li>
           ))
         }
       </ul>
-      <a rel="noopener"
+      <a
+        rel='noopener'
         href='https://github.com/newtyf/newtyf-portfolio-v2'
         target='_blank'
         class='nav'
@@ -125,14 +127,15 @@ const { followers } = dataUser;
       {
         social.map((item) => (
           <li>
-            <a rel="noopener"
+            <a
+              rel='noopener'
               title='social-link'
               href={item.link}
               class='icon'
               target='_blank'
             >
               <i class={`bi bi-${item.title}`} />
-              <span class="linkText--hide">{item.title}</span>
+              <span class='linkText--hide'>{item.title}</span>
             </a>
           </li>
         ))
@@ -143,7 +146,7 @@ const { followers } = dataUser;
   <div class='animate__animated animate__fadeInUpBig social mail'>
     <ul class='social-list reverse'>
       <li class='text-reverse'>
-        <a rel="noopener" class='icon' href={`mailto:${mail}`}>
+        <a rel='noopener' class='icon' href={`mailto:${mail}`}>
           {mail}
         </a>
       </li>
@@ -153,13 +156,14 @@ const { followers } = dataUser;
 </body>
 
 <script
+  is:inline
   src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'
-  onload={}
 ></script>
+
 <script>
   import { ShowContentScroll } from "../helpers/ShowContentScroll";
+  ShowContentScroll();
   window.particlesJS.load("particles-js", "/particles.json", function () {
     console.log("callback - particles.js config loaded");
   });
-  ShowContentScroll();
 </script>
