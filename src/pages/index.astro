@@ -84,7 +84,7 @@ const { followers } = dataUser;
         {
           social.map((item) => (
             <li>
-              <a
+              <a rel="noopener"
                 title='social-link'
                 href={item.link}
                 class='nav'
@@ -97,7 +97,7 @@ const { followers } = dataUser;
           ))
         }
       </ul>
-      <a
+      <a rel="noopener"
         href='https://github.com/newtyf/newtyf-portfolio-v2'
         target='_blank'
         class='nav'
@@ -125,7 +125,7 @@ const { followers } = dataUser;
       {
         social.map((item) => (
           <li>
-            <a
+            <a rel="noopener"
               title='social-link'
               href={item.link}
               class='icon'
@@ -143,7 +143,7 @@ const { followers } = dataUser;
   <div class='animate__animated animate__fadeInUpBig social mail'>
     <ul class='social-list reverse'>
       <li class='text-reverse'>
-        <a class='icon' href={`mailto:${mail}`}>
+        <a rel="noopener" class='icon' href={`mailto:${mail}`}>
           {mail}
         </a>
       </li>
