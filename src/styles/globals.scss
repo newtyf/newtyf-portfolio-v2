@@ -126,9 +126,10 @@ h2 {
   font-size: 32px;
 }
 
-h4 {
+time {
   font-family: var(--font-fira-code);
   font-size: 18px;
+  font-weight: bold;
   color: var(--blue-color);
 }
 
@@ -181,6 +182,10 @@ a {
       color: var(--blue-color);
       transform: translateY(-10px);
     }
+  }
+
+  .linkText--hide {
+    display: none;
   }
 }
 

@@ -29,6 +29,7 @@ const { project, rigth } = Astro.props;
       <li>
         <a href={project.github} class='icon' title='github' target='_blank'>
           <i class={`bi bi-github`}></i>
+          <span class="linkText--hide">github</span>
         </a>
       </li>
       <li>
@@ -41,6 +42,7 @@ const { project, rigth } = Astro.props;
               target='_blank'
             >
               <i class='bi bi-box-arrow-up-right' />
+              <span class="linkText--hide">{project.title}</span>
             </a>
           )
         }

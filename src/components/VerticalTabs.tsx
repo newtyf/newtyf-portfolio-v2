@@ -13,7 +13,6 @@ interface TabPanelProps {
   isMobile?: boolean;
 }
 
-
 function a11yProps(index: number) {
   return {
     id: `vertical-tab-${index}`,
@@ -29,7 +28,7 @@ export function TabPanel(props: TabPanelProps) {
       hidden={value !== index}
       id={`vertical-tabpanel-${index}`}
       aria-labelledby={`vertical-tab-${index}`}
-      className="animate__animated animate__fadeIn animate__slow"
+      className='animate__animated animate__fadeIn animate__slow'
     >
       {value === index && (
         <Box
@@ -44,7 +43,6 @@ export function TabPanel(props: TabPanelProps) {
     </div>
   );
 }
-
 
 export function VerticalTabs({ works }: { works: job[] }) {
   const [value, setValue] = React.useState(0);
@@ -91,9 +89,9 @@ export function VerticalTabs({ works }: { works: job[] }) {
         >
           <div>
             <h2>{item.role}</h2>
-            <h4>
+            <time>
               {item.start} - {item.end}
-            </h4>
+            </time>
             <ul>
               {item.description.map((task) => (
                 <li key={task}>{task}</li>
