@@ -4,7 +4,7 @@ export const ShowContentScroll = () => {
     for (let i = 0; i < reveals.length; i++) {
       let windowHeigth = window.innerHeight;
       let revelTop = reveals[i].getBoundingClientRect().top;
-      let revealPoint = 100;
+      let revealPoint = 0;
 
       if (revelTop < windowHeigth - revealPoint) {
         reveals[i].classList.add("active");

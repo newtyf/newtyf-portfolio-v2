@@ -14,7 +14,7 @@ import { menu } from "../utils/profile";
           class={`animate__animated animate__fadeInDown`}
           style={{ animationDelay: `${(index + 1) / 4}s` }}
         >
-          <a class={!!item.styleCustom ? "btn" : "nav"} href={item.link}>
+          <a class={!!item.styleCustom ? "btn" : "nav"} href={item.link} target={`${!!item.styleCustom ? "_blank" : ""}`} >
             {item.title}
           </a>
         </li>

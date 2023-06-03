@@ -60,7 +60,7 @@ export const jobs: job[] = [
       "Email testing",
       "Investigation of services to improve the development of emails",
     ],
-    role: "Programer",
+    role: "Programmer",
     start: "JUL 2022",
     end: "MAR 2023",
   },
@@ -94,7 +94,7 @@ export const projects: project[] = [
   {
     title: "JUAN BOT",
     description:
-      "Discord bot for play music of youtube or sporitfy in your Discord server!",
+      "Discord bot for playing music of youtube or sporitfy in your Discord server!",
     github: "https://github.com/newtyf/Newt-Bot",
     image: "/discord.webp",
     // liveSite: "https://github.com/newtyf/Newt-Bot",
