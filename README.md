@@ -1,47 +1,54 @@
-# Astro Starter Kit: Minimal
+<h1 align="center">Newtyf Portfolio v2</h1>
+<h6 align="center">My personal portfolio v2</h6>
 
-```
-npm create astro@latest -- --template minimal
-```
+<div align="center"><img src="https://github.com/newtyf/newtyf-portfolio-v2/assets/87625663/08971134-a7f2-466f-8ade-8ed375d46ef4" alt="game-image" width="500" /></div>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+<p align="center">Live Site <a style="color: #70aaa2" href="https://newtyf.com/">Here</a>.</p>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+1. Bootstrapped with [Astro](https://astro.build/).
 
-Inside of your Astro project, you'll see the following folders and files:
+## 👾 Set Up
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+1. Install the dependencies
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+  ```sh
+  npm install
+  ```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+2. Start development server
 
-Any static assets, like images, can be placed in the `public/` directory.
+  ```sh
+  npm run dev
+  ```
 
-## 🧞 Commands
+## 👾 Build and Run for production
+1. Generate a full static production build
 
-All commands are run from the root of the project, from a terminal:
+  ```sh
+  npm run build
+  ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+2. You can run with:
 
-## 👀 Want to learn more?
+  ```sh
+  npx http-server ./dist
+  ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+### 🛠 Built with
+
+- Typescript
+- Semantic HTML5 markup
+- Sass
+- Bootstrap Icons
+- [Animate.css](https://animate.style/)
+- [Material UI](https://mui.com/material-ui/getting-started/overview/) - React library
+- [Astro](https://astro.build/) - Static Site generator
+
+### 💻 Author
+
+- Portfolio - [@newtyf](https://newtyf.com)
+- Instagram - [@newtyf](https://www.instagram.com/newt_yf/)
+- LinkedIn - [@newtyf](https://www.linkedin.com/in/axel-mu%C3%B1oz/)
+- Frontend Mentor - [@newtyf](https://www.frontendmentor.io/profile/TREz-bits)
