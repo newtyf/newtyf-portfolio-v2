@@ -13,7 +13,7 @@ const { project, rigth } = Astro.props;
   class={rigth ? "projects-content reveal rigth" : "projects-content reveal"}
 >
   <div class='projects-content__text'>
-    <h4>Featured Project</h4>
+    <p class="projects-content__subtitle">Featured Project</p>
     <h3>
       <a href={project.liveSite} class='line' target='_blank'>
         {project.title}

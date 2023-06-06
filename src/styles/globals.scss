@@ -284,6 +284,23 @@ a {
   }
 }
 
+.logo {
+  width: 150px;
+  padding-top: 10px;
+  img {
+    width: 100%;
+    height: 100%;
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+    transition: 300ms;
+    animation-fill-mode: backwards;
+    font-family: var(--font-fira-code);
+    &:hover {
+      transform: rotate(-10deg);
+    }
+  }
+}
+
 @import "./navbar.scss";
 @import "./home.scss";
 @import "./about.scss";

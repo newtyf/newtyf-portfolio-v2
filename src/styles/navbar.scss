@@ -11,20 +11,6 @@
 
   @include mobile {
     padding: 20px 20px;
-    h1 {
-      font-size: 25px;
-    }
-  }
-
-  h1 {
-    animation-name: fadeInDown;
-    animation-duration: 2s;
-    transition: 300ms;
-    animation-fill-mode: backwards;
-    font-family: var(--font-fira-code);
-    &:hover {
-      transform: rotate(-10deg);
-    }
   }
 
   ol {

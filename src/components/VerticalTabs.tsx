@@ -88,7 +88,7 @@ export function VerticalTabs({ works }: { works: job[] }) {
           isMobile={isMobile}
         >
           <div>
-            <h2>{item.role}</h2>
+            <h3>{item.role}</h3>
             <time>
               {item.start} - {item.end}
             </time>
