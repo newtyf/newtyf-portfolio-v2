@@ -24,5 +24,12 @@ export const AsideEffect = () => {
     }, 1000);
   };
 
+  //? listener to change body overflow
+  onresize = () => {
+    if (window.innerWidth > 600) {
+      body.style.overflow = "visible";
+    }
+  };
+
   return { showSlide, hideSlide };
 };

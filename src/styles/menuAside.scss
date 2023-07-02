@@ -3,11 +3,15 @@ aside {
   top: 0;
   right: -100vw;
   z-index: 100;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   height: 100vh;
   width: 100vw;
   transition: right 1s;
+
+  @include mobile {
+    display: flex;
+  }
 
   .background-close {
     width: 30%;

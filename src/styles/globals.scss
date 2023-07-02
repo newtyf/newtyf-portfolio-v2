@@ -19,13 +19,13 @@
 }
 
 @mixin tablet {
-  @media (max-width: 1069px) {
+  @media (max-width: 968px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (max-width: 2600px) {
+  @media (max-width: 1200px) {
     @content;
   }
 }
@@ -246,11 +246,14 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: inherit;
+  border-radius: 2px;
+  transition: 300ms ease-out;
 
   &:hover {
-    outline: 1px dashed var(--white-color);
-    background-color: transparent;
+    outline: 1px solid var(--blue-color);
+    background-color: var(--blue-color);
     color: var(--white-color);
+    box-shadow: 5px 5px 0px 0px #1a64a0, 10px 10px 0px 0px #12446d;
   }
 
   &.btn--more {
@@ -277,6 +280,8 @@ a {
     }
 
     &:hover {
+      outline: none;
+      box-shadow: none;
       outline: none;
     }
     &:hover::before {

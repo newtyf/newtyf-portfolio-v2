@@ -39,6 +39,7 @@
   }
 
   .menu-hamburger {
+    display: none;
     button {
       outline: none;
       background: transparent;
@@ -109,10 +110,6 @@
         -o-transform: rotate(-135deg);
         transform: rotate(-135deg);
       }
-    }
-
-    @include desktop {
-      display: none;
     }
 
     @include mobile {
