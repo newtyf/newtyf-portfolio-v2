@@ -53,6 +53,18 @@ export const social: option[] = [
 
 export const jobs: job[] = [
   {
+    title: "Funciton Communication",
+    description: [
+      "Layout and development of emails",
+      "Development Landing pages",
+      "CMS management",
+      "Reducing time with python scripts"
+    ],
+    role: "Frontend Developer",
+    start: "JUN 2023",
+    end: "Currently working",
+  },
+  {
     title: "Mirum Agency",
     description: [
       "Layout and development of emails",
