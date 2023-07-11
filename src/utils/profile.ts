@@ -1,5 +1,6 @@
 import type { job, option, project } from "../types";
 
+export const mail = "axelskam.123@outlook.es";
 
 export const menu: option[] = [
   {
@@ -20,8 +21,6 @@ export const social: option[] = [
   { title: "linkedin", link: "https://www.linkedin.com/in/axel-mu%C3%B1oz/" },
   { title: "instagram", link: "https://www.instagram.com/newt_yf/" },
 ];
-
-export const mail = "axelskam.123@outlook.es";
 
 // export const worksSpa: job[] = [
 //   {

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.webp' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link
+      rel='preconnect'
+      href='https://fonts.gstatic.com'
+      crossorigin='anonymous'
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Finger+Paint&family=Roboto:wght@400;700&display=swap'
+      rel='stylesheet'
+    /><link
+      href='https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap'
+      rel='stylesheet'
+    /><link
+      href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'
+      rel='stylesheet'
+    />
+    <link rel='canonical' href='https://newtyf.com/' />
+    <meta name='generator' content={Astro.generator} />
+    <meta
+      name='description'
+      content='I am a Fullstack Developer residing in Peru, with 3 years of
+    experience in the software industry. Being the web my main
+    development focus.'
+    />
+    <title>Newt Youngflex | FullStack Developer</title>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-X94KED5K67'
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-X94KED5K67");
+    console.log("Google analytics charged succesfull");
+  </script>
+  <body>
+    <slot />
+  </body>
+</html>
