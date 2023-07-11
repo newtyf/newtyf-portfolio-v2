@@ -53,7 +53,7 @@ export const social: option[] = [
 
 export const jobs: job[] = [
   {
-    title: "Funciton Communication",
+    title: "Funciton",
     description: [
       "Layout and development of emails",
       "Development Landing pages",

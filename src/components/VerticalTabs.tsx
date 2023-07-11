@@ -69,7 +69,7 @@ export function VerticalTabs({ works }: { works: job[] }) {
         onChange={handleChange}
         variant={isMobile ? "fullWidth" : "standard"}
         aria-label='Vertical tabs example'
-        sx={{ borderRight: 1, borderColor: "divider", minWidth: "160px" }}
+        sx={{ borderRight: 1, borderColor: "divider", minWidth: "160px", maxWidth: `${isMobile ? "auto" : "180px"}` }}
       >
         {works.map((item, index) => (
           <Tab
