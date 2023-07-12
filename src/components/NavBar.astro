@@ -1,14 +1,10 @@
 ---
 import { menu } from "../utils/profile";
+import Logo from "./Logo.astro"
 ---
 
 <nav id='navbar'>
-  <div class='animate__animated logo'>
-    <a href='#home' title="Newtyf">
-      <img src="/logo/logo-no-background.svg" alt="logo">
-    </a>
-  </div>
-
+  <Logo />
   <ol>
     {
       menu.map((item, index) => (
