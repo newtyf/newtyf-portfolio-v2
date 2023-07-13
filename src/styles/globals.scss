@@ -84,6 +84,7 @@ body {
     border-radius: 5px;
     background-color: var(--gray-color);
   }
+  overscroll-behavior: none;
 }
 
 main {
