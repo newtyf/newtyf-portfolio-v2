@@ -105,7 +105,7 @@ export const projects: project[] = [
   {
     title: "JUAN BOT",
     description:
-      "Discord bot for playing music of youtube or sporitfy in your Discord server!",
+      "Discord bot for playing music of youtube or spotify in your Discord server!",
     github: "https://github.com/newtyf/Newt-Bot",
     image: "/discord.webp",
     liveSite: "https://discord.com/api/oauth2/authorize?client_id=958017348395221043&scope=applications.commands",
