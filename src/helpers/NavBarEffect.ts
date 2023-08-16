@@ -6,15 +6,9 @@ export const NavBarEffect = (): void => {
     var currentScrollPos = window.scrollY;
 
     if (window.scrollY > 0) {
-      navbar.style.backgroundColor = "transparent";
-      navbar.style.boxShadow =
-        "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px";
-      navbar.style.borderEndEndRadius = "10px";
-      navbar.style.backdropFilter = "blur(30px) brightness(30%)";
+      navbar.classList.add("transparent")
     } else {
-      navbar.style.backgroundColor = "transparent";
-      navbar.style.boxShadow = "none";
-      navbar.style.backdropFilter = "none";
+      navbar.classList.remove("transparent")
     }
 
     if (prevScrollpos > currentScrollPos) {

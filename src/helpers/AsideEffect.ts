@@ -24,7 +24,7 @@ export const AsideEffect = () => {
     }, 1000);
   };
 
-  //? listener to change body overflow
+  //? listener to change body overflow when the size of the screen up and the aside is hide
   onresize = () => {
     if (window.innerWidth > 600) {
       body.style.overflow = "visible";
