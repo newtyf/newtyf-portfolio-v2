@@ -24,6 +24,12 @@
   }
 }
 
+@mixin tablet-lg {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (max-width: 1200px) {
     @content;
@@ -314,6 +320,7 @@ a {
 @import "./about.scss";
 @import "./work.scss";
 @import "./projects.scss";
+@import "./real-projects.scss";
 @import "./contact.scss";
 @import "./footer.scss";
 

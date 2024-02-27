@@ -1,0 +1,21 @@
+---
+import { realProjects } from "../../utils/profile";
+import ProjectCard from "../ProjectCard.astro";
+---
+
+<section id='real-projects' class='container'>
+  <div class='title-section reveal'>
+    <h2>
+      <span class='code-number'>03.</span>
+      <a href='#projects' class='nav'> Real world projects I've built</a>
+    </h2>
+    <span class='line-title'></span>
+  </div>
+  <article class="list-real-projects">
+    {
+      realProjects.map((project, index) => (
+        <ProjectCard project={project} />
+      ))
+    }
+  </article>
+</section>

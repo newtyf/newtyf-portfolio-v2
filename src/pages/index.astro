@@ -4,12 +4,11 @@ import "../styles/globals.scss";
 import "animate.css";
 
 import Layout from "../layouts/Layout.astro"
-import NavBar from "../components/NavBar.astro";
-import AsideSlide from "../components/AsideSlide.astro";
 
 import Home from "../components/sections/Home.astro";
 import About from "../components/sections/About.astro";
 import Work from "../components/sections/Work.astro";
+import RealWordProjects from "../components/sections/RealWordProjects.astro";
 import Projects from "../components/sections/Projects.astro";
 import Contact from "../components/sections/Contact.astro";
 import { mail, social } from "../utils/profile";
@@ -25,13 +24,12 @@ const { followers } = dataUser;
 ---
 
 <Layout>
-  <body>
-    <NavBar />
     <main>
       <div id='particles-js'></div>
       <Home />
       <About />
       <Work />
+      <RealWordProjects />
       <Projects />
       <Contact />
       <footer>
@@ -74,7 +72,6 @@ const { followers } = dataUser;
         </a>
       </footer>
     </main>
-    <AsideSlide />
 
     <div class='animate__animated animate__fadeInUpBig social icons'>
       <ul class='social-list'>
@@ -107,12 +104,6 @@ const { followers } = dataUser;
       </ul>
       <div class='social-line'></div>
     </div>
-
-    <!-- <link
-      rel='stylesheet'
-      href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css'
-    /> -->
-  </body>
 </Layout>
 
 <script

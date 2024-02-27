@@ -92,3 +92,15 @@ export const projects: project[] = [
     tags: ["Vite", "Pinia", "VueJS", "Scss"],
   },
 ];
+
+export const realProjects: project[] = [
+  {
+    title: "Forest Export S.A.C",
+    description:
+      "A web page to display business information, products and services, and also allows you to contact customers through a form to request the customer's wood products.",
+    github: "https://github.com/newtyf/rock-paper-scissors",
+    image: "/forest-export.webp",
+    liveSite: "https://forestexportsac.com/",
+    tags: ["Astro", "Tailwind Css", "React", "Analytics" ],
+  },
+];

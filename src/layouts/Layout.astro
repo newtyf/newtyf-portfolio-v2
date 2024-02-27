@@ -1,3 +1,9 @@
+---
+import NavBar from "../components/NavBar.astro";
+import AsideSlide from "../components/AsideSlide.astro";
+
+---
+
 <!DOCTYPE html>
 <html lang='en'>
   <head>
@@ -48,6 +54,8 @@
     console.log("Google analytics charged succesfull");
   </script>
   <body>
+    <NavBar />
     <slot />
+    <AsideSlide />
   </body>
 </html>

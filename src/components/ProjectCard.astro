@@ -3,10 +3,10 @@ import type { project } from "../types";
 
 interface Props {
   project: project;
-  rigth: boolean;
+  rigth?: boolean;
 }
 
-const { project, rigth } = Astro.props;
+const { project, rigth = false } = Astro.props;
 ---
 
 <div
