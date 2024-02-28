@@ -67,7 +67,7 @@
           display: flex;
           list-style: none;
           li {
-            color: var(--gray-color-ligth);
+            color: var(--gray-color-light);
             font-size: 14px;
             font-family: var(--font-fira-code);
             text-transform: capitalize;
@@ -92,7 +92,7 @@
 
               &:hover {
                 color: var(--blue-color);
-                transform: translateY(-10px);
+                transform: translateY(-5px);
               }
             }
           }

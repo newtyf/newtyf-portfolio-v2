@@ -39,6 +39,7 @@ $bootstrap-icons-map: (
   "instagram": "\f437",
   "github": "\f3ed",
   "linkedin": "\f472",
+  "code-square": "\F2C7"
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {

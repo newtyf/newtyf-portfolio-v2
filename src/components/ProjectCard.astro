@@ -1,19 +1,19 @@
 ---
-import type { project } from "../types";
 
 interface Props {
   project: project;
   rigth?: boolean;
+  subtitle?: string
 }
 
-const { project, rigth = false } = Astro.props;
+const { project, rigth = false, subtitle =  "Featured Project"} = Astro.props;
 ---
 
 <div
   class={rigth ? "projects-content reveal rigth" : "projects-content reveal"}
 >
   <div class='projects-content__text'>
-    <p class="projects-content__subtitle">Featured Project</p>
+    <p class='projects-content__subtitle'>{subtitle}</p>
     <h3>
       <a href={project.liveSite} class='line' target='_blank'>
         {project.title}
@@ -26,15 +26,24 @@ const { project, rigth = false } = Astro.props;
       {project.tags.map((tag) => <li>{tag}</li>)}
     </ul>
     <ul class='link-icons'>
-      <li>
-        <a href={project.github} class='icon' title='github' target='_blank'>
-          <i class={`bi bi-github`}></i>
-          <span class="linkText--hide">github</span>
-        </a>
-      </li>
-      <li>
-        {
-          project.liveSite && (
+      {
+        project.github && (
+          <li>
+            <a
+              href={project.github}
+              class='icon'
+              title='github'
+              target='_blank'
+            >
+              <i class={`bi bi-github`} />
+              <span class='linkText--hide'>github</span>
+            </a>
+          </li>
+        )
+      }
+      {
+        project.liveSite && (
+          <li>
             <a
               href={project.liveSite}
               class='icon'
@@ -42,11 +51,11 @@ const { project, rigth = false } = Astro.props;
               target='_blank'
             >
               <i class='bi bi-box-arrow-up-right' />
-              <span class="linkText--hide">{project.title}</span>
+              <span class='linkText--hide'>{project.title}</span>
             </a>
-          )
-        }
-      </li>
+          </li>
+        )
+      }
     </ul>
   </div>
   <div class='projects-content__image'>

@@ -4,7 +4,6 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
-import type { job } from "../types";
 
 interface TabPanelProps {
   children?: React.ReactNode;

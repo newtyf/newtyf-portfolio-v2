@@ -1,5 +1,3 @@
-import type { job, option, project } from "../types";
-
 export const mail = "axelskam.123@outlook.es";
 
 export const menu: option[] = [
@@ -11,15 +9,15 @@ export const menu: option[] = [
     title: "Work",
     link: "#work",
   },
-  { title: "Projects", link: "#projects" },
+  { title: "Projects", link: "#real-projects" },
   { title: "Contact", link: "#contact" },
-  { title: "Resume", link: "/cv.pdf", styleCustom: true },
+  { title: "Resume", link: "/axel-cristopher-munoz-ccaihuari-cv.pdf", styleCustom: true },
 ];
 
 export const social: option[] = [
   { title: "github", link: "https://github.com/newtyf" },
   { title: "linkedin", link: "https://www.linkedin.com/in/axel-mu%C3%B1oz/" },
-  { title: "instagram", link: "https://www.instagram.com/newt_yf/" },
+  { title: "code-square", link: "https://leetcode.com/Trez_/" },
 ];
 
 export const jobs: job[] = [
@@ -98,9 +96,8 @@ export const realProjects: project[] = [
     title: "Forest Export S.A.C",
     description:
       "A web page to display business information, products and services, and also allows you to contact customers through a form to request the customer's wood products.",
-    github: "https://github.com/newtyf/rock-paper-scissors",
     image: "/forest-export.webp",
     liveSite: "https://forestexportsac.com/",
-    tags: ["Astro", "Tailwind Css", "React", "Analytics" ],
+    tags: ["Astro", "Tailwind Css", "React", "GA4", "i18N" ],
   },
 ];

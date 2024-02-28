@@ -18,7 +18,7 @@
       // animation: typing 2.5s steps(40, end), blink-caret .75s step-end infinite;
 
       @include tablet-lg {
-        font-size: 120px;
+        font-size: 142px;
         margin-bottom: 10px;
         margin-top: 0;
       }
@@ -55,7 +55,7 @@
     line-height: 1.5;
     margin: 20px 0;
     max-width: 465px;
-    color: var(--gray-color-ligth);
+    color: var(--gray-color-light);
 
     @include tablet {
       margin-top: 0;
