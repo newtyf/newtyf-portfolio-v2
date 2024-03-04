@@ -1,3 +1,5 @@
+import { Category, type job, type option, type project } from "src/types";
+
 export const mail = "axelskam.123@outlook.es";
 
 export const menu: option[] = [
@@ -63,16 +65,8 @@ export const jobs: job[] = [
 
 export const projects: project[] = [
   {
-    title: "RPS GAME",
-    description:
-      "The classic game of rock paper scissors comes to the web, play against the computer or against your friends!",
-    github: "https://github.com/newtyf/rock-paper-scissors",
-    image: "/rpsa.webp",
-    liveSite: "https://rps.newtyf.com/",
-    tags: ["React", "Vite", "TypeScript", "Signal R", "Mongo DB", "Real-time"],
-  },
-  {
     title: "JUAN BOT",
+    category: Category.BACKEND,
     description:
       "Discord bot for playing music of youtube or spotify in your Discord server!",
     github: "https://github.com/newtyf/Newt-Bot",
@@ -82,6 +76,7 @@ export const projects: project[] = [
   },
   {
     title: "Pomodoro App",
+    category: Category.FRONTEND,
     description:
       "Web application to organize your time and increase your productivity using the Pomodoro!",
     github: "https://github.com/newtyf/Pomodoro-by-newt",
@@ -89,15 +84,35 @@ export const projects: project[] = [
     liveSite: "https://newtpomofocus.netlify.app/",
     tags: ["Vite", "Pinia", "VueJS", "Scss"],
   },
+  {
+    title: "RPS GAME",
+    category: Category.FULLSTACK,
+    description:
+      "The classic game of rock paper scissors comes to the web, play against the computer or against your friends!",
+    github: "https://github.com/newtyf/rock-paper-scissors",
+    image: "/rpsa.webp",
+    liveSite: "https://rps.newtyf.com/",
+    tags: ["React", "Vite", "TypeScript", "Signal R", "Mongo DB", "Real-time"],
+  },
+  {
+    title: "Forest Export S.A.C",
+    category: Category.FREELANCE,
+    description:
+      "A web page to display business information, products and services, and also allows you to contact customers through a form to request the customer's wood products.",
+    image: "/forest-export.webp",
+    liveSite: "https://forestexportsac.com/",
+    tags: ["Astro", "Tailwind Css", "React", "GA4", "i18N", "PHP" ],
+  },
 ];
 
 export const realProjects: project[] = [
   {
     title: "Forest Export S.A.C",
+    category: Category.FRONTEND,
     description:
       "A web page to display business information, products and services, and also allows you to contact customers through a form to request the customer's wood products.",
     image: "/forest-export.webp",
     liveSite: "https://forestexportsac.com/",
-    tags: ["Astro", "Tailwind Css", "React", "GA4", "i18N" ],
+    tags: ["Astro", "Tailwind Css", "React", "GA4", "i18N", "PHP" ],
   },
 ];

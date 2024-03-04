@@ -11,12 +11,14 @@ export const NavBarEffect = (): void => {
       navbar.classList.remove("transparent")
     }
 
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos >= currentScrollPos) {
       navbar.style.top = "0px";
     } else {
       navbar.style.top = "-120px";
     }
     prevScrollpos = currentScrollPos;
   };
+  showAndHideNavbar()
+
   window.addEventListener("scroll", showAndHideNavbar);
 };

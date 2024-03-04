@@ -8,7 +8,6 @@ import Layout from "../layouts/Layout.astro"
 import Home from "../components/sections/Home.astro";
 import About from "../components/sections/About.astro";
 import Work from "../components/sections/Work.astro";
-import RealWordProjects from "../components/sections/RealWordProjects.astro";
 import Projects from "../components/sections/Projects.astro";
 import Contact from "../components/sections/Contact.astro";
 import { mail, social } from "../utils/profile";
@@ -29,7 +28,6 @@ const { followers } = dataUser;
       <Home />
       <About />
       <Work />
-      <RealWordProjects />
       <Projects />
       <Contact />
       <footer>
@@ -113,7 +111,8 @@ const { followers } = dataUser;
 
 <script>
   import { ShowContentScroll } from "../helpers/ShowContentScroll";
-  ShowContentScroll();
+  const {reveal} = ShowContentScroll();
+  window.addEventListener("scroll", reveal);
   window.particlesJS.load("particles-js", "/particles.json", function () {
     console.log("callback - particles.js config loaded");
   });

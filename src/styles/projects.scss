@@ -7,14 +7,40 @@
   //   }
   // }
 
+  .filter-projects {
+    margin: 20px 0 40px 0;
+    ul {
+      display: flex;
+      gap: 5px;
+      button {
+        border: 1px solid var(--blue-color);
+        padding: 8px;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        transition: background-color 200ms;
+        border-radius: 16px;
+
+        &:hover {
+          background-color: var(--blue-color);
+        }
+
+        &.active {
+          background-color: var(--blue-color);
+        }
+      }
+    }
+  }
+
   .projects-content {
     display: flex;
-    margin-top: 100px;
+    margin-bottom: 100px;
     position: relative;
     text-align: left;
     align-items: center;
     @include mobile {
-      margin-top: 30px;
+      margin-bottom: 30px;
       padding: 20px;
       min-height: 400px;
       border: 1px solid var(--blue-color);
@@ -137,7 +163,7 @@
       }
     }
 
-    &.rigth {
+    &.right {
       text-align: right;
       flex-direction: row-reverse;
       .projects-content__image {
@@ -149,5 +175,17 @@
         }
       }
     }
+  }
+
+  .not-found-projects {
+    height: 270px;
+    background-color: var(--light-dark-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    font-size: xx-large;
+    font-weight: bold;
   }
 }

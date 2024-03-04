@@ -1,6 +1,6 @@
-export const ShowContentScroll = () => {
+export const ShowContentScroll = (scope: Document | HTMLElement = document) => {
   const reveal = () => {
-    let reveals = document.querySelectorAll<HTMLDivElement>(".reveal");
+    let reveals = scope.querySelectorAll<HTMLDivElement>(".reveal");
     for (let i = 0; i < reveals.length; i++) {
       let windowHeigth = window.innerHeight;
       let revelTop = reveals[i].getBoundingClientRect().top;
@@ -14,5 +14,5 @@ export const ShowContentScroll = () => {
     }
   };
 
-  window.addEventListener("scroll", reveal);
+  return { reveal }
 };
