@@ -11,6 +11,7 @@
     margin: 20px 0 40px 0;
     ul {
       display: flex;
+      flex-wrap: wrap;
       gap: 5px;
       button {
         border: 1px solid var(--blue-color);
