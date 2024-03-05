@@ -11,7 +11,7 @@ export const menu: option[] = [
     title: "Work",
     link: "#work",
   },
-  { title: "Projects", link: "#real-projects" },
+  { title: "Projects", link: "#projects" },
   { title: "Contact", link: "#contact" },
   { title: "Resume", link: "/axel-cristopher-munoz-ccaihuari-cv.pdf", styleCustom: true },
 ];
