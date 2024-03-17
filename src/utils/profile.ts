@@ -71,7 +71,7 @@ export const projects: project[] = [
       "Discord bot for playing music of youtube or spotify in your Discord server!",
     github: "https://github.com/newtyf/Newt-Bot",
     image: "/discord.webp",
-    liveSite: "https://discord.com/api/oauth2/authorize?client_id=958017348395221043&scope=applications.commands",
+    liveSite: "https://discord.com/oauth2/authorize?client_id=958017348395221043&permissions=8&scope=bot",
     tags: ["Node", "DiscordJS", "Discord-player"],
   },
   {
