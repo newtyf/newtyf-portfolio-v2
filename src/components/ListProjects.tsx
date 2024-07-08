@@ -18,20 +18,12 @@ const filters = [
     filter: Category.FREELANCE,
   },
   {
-    name: "FullStack",
+    name: "Full stack",
     filter: Category.FULLSTACK,
   },
   {
     name: "Backend",
     filter: Category.BACKEND,
-  },
-  {
-    name: "Frontend",
-    filter: Category.FRONTEND,
-  },
-  {
-    name: "Mobile",
-    filter: Category.MOBILE,
   },
 ];
 
