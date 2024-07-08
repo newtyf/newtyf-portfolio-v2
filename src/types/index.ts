@@ -19,6 +19,7 @@ export type job = {
   role: string;
   start: string;
   end: string;
+  skills: string[];
 };
 
 export type project = {
