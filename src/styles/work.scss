@@ -33,6 +33,25 @@
           font-size: 10px;
         }
       }
+      &.tags {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        li {
+          color: var(--white-color);
+          font-size: 12px;
+          font-family: var(--font-fira-code);
+          text-transform: capitalize;
+          margin-right: 8px;
+          padding: 5px 10px;
+          border-radius: 10px;
+          background-color: var(--light-dark-color);
+
+          &::before {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
