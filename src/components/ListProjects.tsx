@@ -55,11 +55,11 @@ export const ListProjects = ({ projects }: Props) => {
 
   return (
     <>
-      <div className='filter-projects reveal'>
-        <ul style={{ listStyle: "none" }}>
+      <div className='filter-projects reveal active'>
+        <ul>
           {filters.map(({ filter, name }) => (
             <li key={name} className='filter'>
-              <button className={`${currentCategory === filter && "active"}`} onClick={() => handleFilter(filter)}>{name}</button>
+              <button type="button" className={`${currentCategory === filter && "active"}`} onClick={() => handleFilter(filter)}>{name}</button>
             </li>
           ))}
         </ul>

@@ -17,7 +17,7 @@ export const ProjectCard = ({
     <div
       data-category={category}
       className={
-        `projects-content reveal ${right ? "right" : ""}`
+        `projects-content reveal${right ? " right" : ""}`
       }
     >
       <div className='projects-content__text'>

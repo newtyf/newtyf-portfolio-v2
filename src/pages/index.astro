@@ -12,10 +12,10 @@ import Projects from "../components/sections/Projects.astro";
 import Contact from "../components/sections/Contact.astro";
 import { mail, social } from "../utils/profile";
 
-const res = await fetch(`https://api.github.com/repos/newtyf/newtyf-portfolio`);
+const res = await fetch(`https://api.github.com/repos/newtyf/newtyf-portfolio`, { headers: { "user-agent": "node.js" } });
 const dataRepo = await res.json();
 
-const resUser = await fetch(`https://api.github.com/users/newtyf`);
+const resUser = await fetch(`https://api.github.com/users/newtyf`, { headers: { "user-agent": "node.js" } });
 const dataUser = await resUser.json();
 
 const { stargazers_count } = dataRepo;
@@ -96,7 +96,7 @@ const { followers } = dataUser;
       <ul class='social-list reverse'>
         <li class='text-reverse'>
           <a rel='noopener' class='icon' href={`mailto:${mail}`}>
-            {mail}
+            send_me_a_message_bro
           </a>
         </li>
       </ul>
