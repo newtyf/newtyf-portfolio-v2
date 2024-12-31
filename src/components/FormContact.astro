@@ -1,47 +1,26 @@
 <form id='form' class='form' data-origin={Astro.url.origin}>
-  <label>
-    <p>Nombre Completo:</p>
-    <input name='name' type='text' required /></label
+  <label id="name">
+    <p>Who are you?</p>
+    <input name='name' type='text' required placeholder="I'm a robot" /></label
   >
-  <label>
-    <p>Correo Electrónico:</p>
-    <input name='email' type='email' required /></label
-  >
-  <label>
-    <p>Numero de Celular:</p>
-    <input name='phone' type='tel' required /></label
+  <label id="email">
+    <p>Your mail is...</p>
+    <input name='email' type='email' required placeholder="robot@wise.com" /></label
   >
 
-  <label>
-    <p>Mensaje:</p>
-    <textarea name='message' rows='6' maxlength='150' required></textarea>
+  <label id="message">
+    <textarea name='message' rows='6' maxlength='200' required placeholder="Write your message..."></textarea>
   </label>
 
-  <button class='btn' id='form-submit' type='submit'
-    >Hello! </button
+  <button class='btn btn--more' id='form-submit' type='submit'
+    >Let's talk! <div class="spinner"></div></button
   >
 </form>
-<article class='form-message form-message--hide'>
-  <h2 class='form-message__title'>¡Mensaje enviado correctamente!</h2>
-  <p class='form-message__message'>
-    Estaremos atendiéndote muy pronto, ¡Muchas gracias por contactarnos!
-  </p>
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    class='svg-success'
-    viewBox='0 0 24 24'
-  >
-    <g stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'>
-      <circle class='success-circle-outline' cx='12' cy='12' r='11.5'></circle>
-      <circle class='success-circle-fill' cx='12' cy='12' r='11.5'></circle>
-      <polyline class='success-tick' points='17,8.5 9.5,15.5 7,13'></polyline>
-    </g>
-  </svg>
-</article>
 
 <script>
   const form = document.querySelector<HTMLFormElement>(".form")!;
   const formMessage = document.querySelector<HTMLDivElement>(".form-message")!;
+  const contactContent = document.querySelector<HTMLDivElement>(".contact-content")!;
 
   const handleSubmit = async (event: SubmitEvent) => {
     event.preventDefault();
@@ -51,6 +30,7 @@
     ) as HTMLButtonElement;
 
     submitBtn.disabled = true;
+    submitBtn.classList.add("btn--loading")
 
     const myForm = event.target as HTMLFormElement;
     myForm.classList.add("disabled");
@@ -64,8 +44,10 @@
 
     myForm.reset();
     submitBtn.disabled = false;
+    submitBtn.classList.remove("btn--loading")
     form.style.display = "none";
     formMessage.classList.replace("form-message--hide", "form-message--show");
+    contactContent.classList.replace("contact-content--show", "contact-content--hide");
   };
 
   form.addEventListener("submit", handleSubmit);

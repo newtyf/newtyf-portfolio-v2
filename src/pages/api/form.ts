@@ -14,10 +14,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
 
   const name = formData.get("name");
   const email = formData.get("email");
-  const phone = formData.get("phone");
   const message = formData.get("message");
 
-  if (!(name && email && phone)) {
+  if (!(name && email && message)) {
     return new Response(
       JSON.stringify({ error: { message: "Se envio data insuficiente" } })
     );
@@ -34,8 +33,6 @@ export const POST: APIRoute = async ({ request, locals }) => {
     <hr />
     <p>Correo: <strong>${email}</strong></p>
     <hr />
-    <p>Número: <strong>${phone}</strong></p>
-    <hr />
     ${message ? `<p>Mensaje: <strong>${message}</strong></p>` : ""}
     `,
   };
@@ -45,7 +42,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
   if (error) {
     console.log(error);
   } else {
-    console.log("Succesfully sended mail " + data?.id);
+    console.log("Successfully sended mail " + data?.id);
   }
 
   return new Response(JSON.stringify({ data, error }));

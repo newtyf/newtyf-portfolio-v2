@@ -295,6 +295,13 @@ a {
     &:hover::before {
       transform: scaleX(1);
     }
+
+    &:disabled {
+      cursor: default;
+      &::before {
+        transform: scaleX(0);
+      }
+    }
   }
 }
 

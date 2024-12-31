@@ -2,18 +2,34 @@
 import FormContact from "../FormContact.astro";
 ---
 
-<section id='contact' class='container reveal'>
+<section id='contact' class='container '>
   <h2 class='title-chip reveal'>
     <span class='code-number'>04.</span>
     {"What's next?"}
   </h2>
-  <div class='contact-content reveal'>
+  <div class='contact-content contact-content--show reveal'>
     <h3>Contact me!</h3>
     <p>
       I am currently looking for new challenges and projects. If you are
-      interested in working with me, send me a message by clicking the button
-      below.
+      interested in working with me, send me a message by completing the form.
     </p>
     <FormContact />
   </div>
+  <article class='form-message form-message--hide'>
+    <h2 class='form-message__title'>¡Successfully sended message!</h2>
+    <p class='form-message__message'>
+      I will check my inbox to see your message, so relax my friend 👩‍🚀.
+    </p>
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      class='svg-success'
+      viewBox='0 0 24 24'
+    >
+      <g stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'>
+        <circle class='success-circle-outline' cx='12' cy='12' r='11.5'></circle>
+        <circle class='success-circle-fill' cx='12' cy='12' r='11.5'></circle>
+        <polyline class='success-tick' points='17,8.5 9.5,15.5 7,13'></polyline>
+      </g>
+    </svg>
+  </article>
 </section>
