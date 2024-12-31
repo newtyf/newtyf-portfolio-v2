@@ -32,5 +32,167 @@
       margin-top: 20px;
       width: 120px;
     }
+
+    .form {
+      // background-color: red;
+      margin: 0 auto;
+      max-width: 700px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      label {
+        width: 100%;
+        color: var(--gray-color-lights);
+        font-size: calc(10px + 0.5vw);
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 0.6rem 1rem;
+          background-color: transparent;
+          outline: none;
+          border: 2px solid var(--blue-color);
+          border-radius: 5px;
+          color: var(--white-color);
+          font-size: calc(8px + 0.5vw);
+          resize: vertical;
+          max-height: 200px;
+
+          &:focus {
+            background: rgba(0, 89, 255, 0.25);
+          }
+        }
+      }
+
+      button {
+        width: 130px
+      }
+    }
+
+    .form-message {
+      flex: 1;
+      color: var(--blue-color);
+      text-align: center;
+      animation: fadeIn 300ms linear;
+
+      &.form-message--hide {
+        display: none;
+      }
+
+      &.form-message--show {
+        display: block;
+      }
+
+      .form-message__title {
+        color: var(--white-color);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+
+.svg-success {
+  display: inline-block;
+  vertical-align: top;
+  height: 150px;
+  width: 150px;
+  opacity: 1;
+  overflow: visible;
+
+  @keyframes success-tick {
+    0% {
+      stroke-dashoffset: 16px;
+      opacity: 1
+    }
+
+    100% {
+      stroke-dashoffset: 31px;
+      opacity: 1
+    }
+  }
+
+  @keyframes success-circle-outline {
+    0% {
+      stroke-dashoffset: 72px;
+      opacity: 1
+    }
+
+    100% {
+      stroke-dashoffset: 0px;
+      opacity: 1
+    }
+  }
+
+  @keyframes success-circle-fill {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .success-tick {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #ffffff;
+    stroke-dasharray: 15px, 15px;
+    stroke-dashoffset: -14px;
+    animation: success-tick 450ms ease 1400ms forwards;
+    opacity: 0;
+  }
+
+  .success-circle-outline {
+    fill: none;
+    stroke-width: 1px;
+    stroke: var(--blue-color);
+    stroke-dasharray: 72px, 72px;
+    stroke-dashoffset: 72px;
+    animation: success-circle-outline 300ms ease-in-out 800ms forwards;
+    opacity: 0;
+  }
+
+  .success-circle-fill {
+    fill: var(--blue-color);
+    stroke: none;
+    opacity: 0;
+    animation: success-circle-fill 300ms ease-out 1100ms forwards;
+  }
+
+  // Can't animate stroke-dashoffset on IE 10 and 11, just show svg instead
+  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    .success-tick {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+      animation: none;
+      opacity: 1;
+    }
+
+    .success-circle-outline {
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+      animation: none;
+      opacity: 1;
+    }
+
+    .success-circle-fill {
+      animation: none;
+      opacity: 1;
+    }
   }
 }
