@@ -18,7 +18,7 @@ export const menu: option[] = [
 
 export const social: option[] = [
   { title: "github", link: "https://github.com/newtyf" },
-  { title: "linkedin", link: "https://www.linkedin.com/in/axel-mu%C3%B1oz/" },
+  { title: "linkedin", link: "https://www.linkedin.com/in/axel-munoz-newtyf/" },
   { title: "code-square", link: "https://leetcode.com/Trez_/" },
 ];
 
