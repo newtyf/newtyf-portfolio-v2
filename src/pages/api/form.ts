@@ -10,7 +10,7 @@ interface Mail {
 
 export const POST: APIRoute = async ({ request, locals }) => {
   const formData = await request.formData();
-  const resend = new Resend(locals.runtime.env.RESEND_APIKEY);
+  const resend = new Resend(String(locals.runtime.env.RESEND_APIKEY));
 
   const name = formData.get("name");
   const email = formData.get("email");
@@ -24,7 +24,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
 
   const mail: Mail = {
     from: `${name} <onboarding@resend.newtyf.com>`,
-    to: locals.runtime.env.CONTACT_MAIL,
+    to: String(locals.runtime.env.CONTACT_MAIL),
     subject: `Corre de contacto developer`,
     html: `
     <p>Este correo fue enviado desde la <strong>web de NEWTYF</strong></p>

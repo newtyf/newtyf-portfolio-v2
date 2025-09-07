@@ -13,10 +13,10 @@ import Contact from "../components/sections/Contact.astro";
 import { mail, social } from "../utils/profile";
 
 const res = await fetch(`https://api.github.com/repos/newtyf/newtyf-portfolio`, { headers: { "user-agent": "node.js" } });
-const dataRepo = await res.json();
+const dataRepo = (await res.json()) as { stargazers_count: number };
 
 const resUser = await fetch(`https://api.github.com/users/newtyf`, { headers: { "user-agent": "node.js" } });
-const dataUser = await resUser.json();
+const dataUser = (await resUser.json()) as { followers: number };
 
 const { stargazers_count } = dataRepo;
 const { followers } = dataUser;
