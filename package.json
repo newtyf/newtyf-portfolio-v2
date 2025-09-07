@@ -25,5 +25,8 @@
     "resend": "^4.0.1",
     "sass": "^1.62.1",
     "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "wrangler": "^4.34.0"
   }
 }

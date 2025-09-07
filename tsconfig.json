@@ -6,4 +6,6 @@
     "baseUrl": ".",
     "verbatimModuleSyntax": true,
   },
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
 }
