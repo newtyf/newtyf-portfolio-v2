@@ -18,9 +18,5 @@ export default defineConfig({
     },
   },
   integrations: [react()],
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
-  }),
+  adapter: cloudflare(),
 });
