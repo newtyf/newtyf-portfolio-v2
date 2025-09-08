@@ -1,13 +1,10 @@
-import * as React from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
-import { useTheme } from "@mui/material/styles";
-import { useMediaQuery } from "@mui/material";
+import { Box, Tab, Tabs, useMediaQuery, useTheme } from "@mui/material";
+import { useState, type ReactNode } from "react";
+
 import type { job } from "src/types";
 
 interface TabPanelProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   index: number;
   value: number;
   isMobile?: boolean;
@@ -45,7 +42,7 @@ export function TabPanel(props: TabPanelProps) {
 }
 
 export function VerticalTabs({ works }: { works: job[] }) {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
