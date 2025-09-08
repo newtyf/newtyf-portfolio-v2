@@ -10,10 +10,10 @@ export default defineConfig({
   vite: {
     ssr: {
       external: [
-        "@mui/material",
-        "@mui/utils",
-        "@emotion/react",
-        "@emotion/styled",
+        // "@mui/material",
+        // "@mui/utils",
+        // "@emotion/react",
+        // "@emotion/styled",
       ],
     },
   },
