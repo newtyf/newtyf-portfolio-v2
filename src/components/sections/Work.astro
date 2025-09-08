@@ -12,6 +12,6 @@ import { jobs } from "../../utils/profile";
     <span class='line-title'></span>
   </div>
   <div class='work-content reveal'>
-    <VerticalTabs works={jobs} client:idle />
+    <VerticalTabs works={jobs} client:only="react" />
   </div>
 </section>

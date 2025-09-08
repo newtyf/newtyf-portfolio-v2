@@ -5,18 +5,12 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
   site: "https://newtytf.com",
-  vite: {
-    ssr: {
-      external: [
-        // "@mui/material",
-        // "@mui/utils",
-        // "@emotion/react",
-        // "@emotion/styled",
-      ],
-    },
-  },
+  output: "server",
   integrations: [react()],
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true
+    }
+  }),
 });
