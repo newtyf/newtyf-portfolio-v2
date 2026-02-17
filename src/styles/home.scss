@@ -9,8 +9,7 @@
   .typewriter {
     .title-home {
       font-family: var(--font-archivo-black);
-      font-size: 172px;
-      margin: -20px 0;
+      font-size: 138px;
 
       // overflow: hidden; /* Ensures the content is not revealed until the animation */
       // border-right: 2px solid rgba(255, 255, 255, 0.75); /* The typwriter cursor */
@@ -18,19 +17,19 @@
       // animation: typing 2.5s steps(40, end), blink-caret .75s step-end infinite;
 
       @include tablet-lg {
-        font-size: 142px;
+        font-size: 124px;
         margin-bottom: 10px;
-        margin-top: 0;
+        margin-top: 0;;
       }
 
       @include tablet {
-        font-size: 93px;
+        font-size: 84px;
         margin-bottom: 10px;
         margin-top: 0;
       }
 
       @include mobile {
-        font-size: 50px;
+        font-size: 44px;
       }
 
       @include s-mobile {
